@@ -6,11 +6,11 @@
   <Include href="KnownImageIds.vsct"/>
   <Include href="VSGlobals.vsct"/>
 
-  <Commands package="OpenInTerminal">
+  <Commands package="guidPackage">
       <Buttons>
           <Button guid="guidOpenInTerminalCmdSet" id="OpenInTerminal" priority="0x500" type="Button">
               <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE"/>
-              <Icon guid="ImageCatalogGuid" id="VisualStudioOnline" />
+              <Icon guid="ImageCatalogGuid" id="WindowsPhone" />
               <CommandFlag>IconIsMoniker</CommandFlag>
               <Strings>
                   <ButtonText>Open In Windows Terminal</ButtonText>
