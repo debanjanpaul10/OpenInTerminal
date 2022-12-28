@@ -14,7 +14,6 @@ D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\V
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\VSCT.write.1.tlog
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\resources.json
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\ctoFiles.json
-D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\_EmptyResource.resources.original
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\mergeCto.cache
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\OpenInTerminal.csproj.CoreCompileInputs.cache
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\OpenInTerminal.dll
@@ -24,3 +23,4 @@ D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\O
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\extension.vsixmanifest
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\files.json
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\createTemplateManifests.cache
+D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Release\_EmptyResource.resources.original
