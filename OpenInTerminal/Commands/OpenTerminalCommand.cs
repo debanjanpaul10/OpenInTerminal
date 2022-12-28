@@ -221,7 +221,7 @@ namespace OpenInTerminal
             else
             {
                 var box = MessageBox.Show(
-                    "I can't find Visual Studio Code (Code.exe). Would you like to help me find it?", Vsix.Name,
+                    "I can't find Windows Terminal (wt.exe). Would you like to help me find it?", Vsix.Name,
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (box == DialogResult.No)
@@ -230,7 +230,7 @@ namespace OpenInTerminal
                 var dialog = new OpenFileDialog
                 {
                     DefaultExt = ".exe",
-                    FileName = "Code.exe",
+                    FileName = "wt.exe",
                     InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
                     CheckFileExists = true
                 };

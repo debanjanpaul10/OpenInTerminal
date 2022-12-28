@@ -12,13 +12,13 @@ namespace OpenInTerminal
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidPackageString = "0a3cf9fa-2fe6-42dc-97df-a0f224cf5854";
+        public const string guidPackageString = "c4bf35e3-bbfd-4575-b525-16f57b348e4f";
         public static Guid guidPackage = new Guid(guidPackageString);
 
-        public const string guidOpenInTerminalCmdSetString = "a807c8ab-0342-4e11-a055-24c7228e2fb0";
+        public const string guidOpenInTerminalCmdSetString = "2fc1b078-e8e7-4b3a-aa8c-60ee82fc3f45";
         public static Guid guidOpenInTerminalCmdSet = new Guid(guidOpenInTerminalCmdSetString);
 
-        public const string guidOpenCurrentInTerminalCmdSetString = "41dc509b-dae0-40b7-9ad2-0e9809457ddc";
+        public const string guidOpenCurrentInTerminalCmdSetString = "b0d8b470-6293-453f-9c4d-f318226f45fe";
         public static Guid guidOpenCurrentInTerminalCmdSet = new Guid(guidOpenCurrentInTerminalCmdSetString);
     }
     /// <summary>
