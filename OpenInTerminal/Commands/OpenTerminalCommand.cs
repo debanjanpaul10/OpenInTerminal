@@ -1,4 +1,8 @@
-﻿
+﻿// ***********************************************************************
+// <copyright file="OpenTerminalCommand.cs" company="Debanjan Paul">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// ***********************************************************************
 
 namespace OpenInTerminal
 {
@@ -13,12 +17,28 @@ namespace OpenInTerminal
     using Microsoft;
     using OpenInTerminal.Helpers;
     using OpenInTerminal;
+    using OpenInTerminal.Commands;
 
+    /// <summary>
+    /// The Open In Windows Terminal Command Class
+    /// </summary>
     internal sealed class OpenTerminalCommand
     {
+        /// <summary>
+        /// The Package property
+        /// </summary>
         private readonly Package _package;
+
+        /// <summary>
+        /// The Options property
+        /// </summary>
         private readonly Options _options;
 
+        /// <summary>
+        /// Create a new instance of <see cref="OpenTerminalCommand"/> class
+        /// </summary>
+        /// <param name="package">The Package</param>
+        /// <param name="options">The Options</param>
         private OpenTerminalCommand(Package package, Options options)
         {
             _package = package;
@@ -38,18 +58,34 @@ namespace OpenInTerminal
             }
         }
 
+        /// <summary>
+        /// Creates an instance of <see cref="OpenTerminalCommand"/>
+        /// </summary>
         public static OpenTerminalCommand Instance { get; private set; }
 
+        /// <summary>
+        /// The IService Provider
+        /// </summary>
         private IServiceProvider ServiceProvider
         {
             get { return _package; }
         }
 
+        /// <summary>
+        /// Initializes the class
+        /// </summary>
+        /// <param name="package">The Package parameters</param>
+        /// <param name="options">The Options parameters</param>
         public static void Initialize(Package package, Options options)
         {
             Instance = new OpenTerminalCommand(package, options);
         }
 
+        /// <summary>
+        /// The Open Current File in Terminal Command
+        /// </summary>
+        /// <param name="sender">The sender object</param>
+        /// <param name="e">The Event trigger</param>
         private void OpenCurrentFileInTerminal(object sender, EventArgs e)
         {
             try
@@ -72,7 +108,7 @@ namespace OpenInTerminal
                             line = selection.ActivePoint.Line;
                         }
 
-                        OpenVsCode(path, line);
+                        OpenWTerminal(path, line);
                     }
                     else
                     {
@@ -90,6 +126,11 @@ namespace OpenInTerminal
             }
         }
 
+        /// <summary>
+        /// The Open Folder in Terminal
+        /// </summary>
+        /// <param name="sender">The sender object</param>
+        /// <param name="e">The Event Trigger</param>
         private void OpenFolderInTerminal(object sender, EventArgs e)
         {
             try
@@ -108,7 +149,7 @@ namespace OpenInTerminal
                         line = selection.ActivePoint.Line;
                     }
 
-                    OpenVsCode(path, line);
+                    OpenWTerminal(path, line);
                 }
                 else
                 {
@@ -121,12 +162,17 @@ namespace OpenInTerminal
             }
         }
 
-        private void OpenVsCode(string path, int line = 0)
+        /// <summary>
+        /// Opens the Windows Terminal
+        /// </summary>
+        /// <param name="path">The path to the file</param>
+        /// <param name="line">default line integer variable</param>
+        private void OpenWTerminal(string path, int line = 0)
         {
             EnsurePathExist();
             bool isDirectory = Directory.Exists(path);
 
-            var args = isDirectory ? "." : line > 0 ? $"-g {path}:{line}" : $"{path}";
+            var args = "";
             if (!string.IsNullOrEmpty(_options.CommandLineArguments))
             {
                 args = $"{args} {_options.CommandLineArguments}";
@@ -152,6 +198,9 @@ namespace OpenInTerminal
             }
         }
 
+        /// <summary>
+        /// Ensures the path to the file exists
+        /// </summary>
         private void EnsurePathExist()
         {
             if (File.Exists(_options.PathToExe))
@@ -195,79 +244,17 @@ namespace OpenInTerminal
             }
         }
 
+        /// <summary>
+        /// Saving options
+        /// </summary>
+        /// <param name="options">The Options parameter</param>
+        /// <param name="path">The Path variable</param>
         private void SaveOptions(Options options, string path)
         {
             options.PathToExe = path;
             options.SaveSettingsToStorage();
         }
 
-    }
-
-    internal static class WindowsTerminalDetect
-    {
-        internal static string InRegistry()
-        {
-            var key = Registry.CurrentUser;
-            var name = "Icon";
-            try
-            {
-                var subKey = key.OpenSubKey(@"SOFTWARE\Classes\*\shell\wt\");
-                var value = subKey.GetValue(name).ToString();
-                if (File.Exists(value))
-                {
-                    return value;
-                }
-
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        internal static string InLocalAppData()
-        {
-            var localAppData = Environment.GetEnvironmentVariable("LOCALAPPDATA");
-
-            var codePartDir = @"Programs\Microsoft VS Code";
-            var codeDir = Path.Combine(localAppData, codePartDir);
-            var drives = DriveInfo.GetDrives();
-
-            foreach (var drive in drives)
-            {
-                if (drive.DriveType == DriveType.Fixed)
-                {
-                    var path = Path.Combine(drive.Name[0] + codeDir.Substring(1), "code.exe");
-                    if (File.Exists(path))
-                    {
-                        return path;
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        internal static string InEnvVarPath()
-        {
-            var envPath = Environment.GetEnvironmentVariable("Path");
-            var paths = envPath.Split(';');
-            var parentDir = "Microsoft VS Code";
-            foreach (var path in paths)
-            {
-                if (path.ToLower().Contains("code"))
-                {
-                    var temp = Path.Combine(path.Substring(0, path.IndexOf(parentDir)),
-                        parentDir, "code.exe");
-                    if (File.Exists(temp))
-                    {
-                        return temp;
-                    }
-                }
-            }
-            return null;
-        }
     }
 }
 
