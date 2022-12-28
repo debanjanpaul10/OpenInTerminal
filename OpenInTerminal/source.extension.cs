@@ -7,11 +7,11 @@ namespace OpenInTerminal
 {
     internal sealed partial class Vsix
     {
-        public const string Id = "OpenInTerminal.f66d8842-5a39-4b66-81c4-e412cccd5ae9";
+        public const string Id = "OpenInTerminal.f66d8842-5a39-4b66-81c4-e412cccd5a123";
         public const string Name = "Open In Windows Terminal";
         public const string Description = @"Opens the Solution or any folder in the Windows Terminal. Pre-requisite: Need to have the Windows Terminal installed.";
         public const string Language = "en-US";
-        public const string Version = "1.0";
+        public const string Version = "1.1";
         public const string Author = "Debanjan Paul";
         public const string Tags = "";
     }

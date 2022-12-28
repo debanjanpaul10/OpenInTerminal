@@ -1,8 +1,9 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="OpenInTerminal.f66d8842-5a39-4b66-81c4-e412cccd5ae9" Version="1.0" Language="en-US" Publisher="Debanjan Paul" />
+    <Identity Id="OpenInTerminal.f66d8842-5a39-4b66-81c4-e412cccd5a123" Version="1.1" Language="en-US" Publisher="Debanjan Paul" />
     <DisplayName>Open In Windows Terminal</DisplayName>
     <Description xml:space="preserve">Opens the Solution or any folder in the Windows Terminal. Pre-requisite: Need to have the Windows Terminal installed.</Description>
+    <MoreInfo>https://github.com/debanjanpaul10/OpenInTerminal</MoreInfo>
     <Icon>Resources\Windows_Terminal_Logo.png</Icon>
     <PreviewImage>Resources\Windows_Terminal_Logo.png</PreviewImage>
   </Metadata>
