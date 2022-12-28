@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+  <Include href="VSGlobals.vsct"/>
+
+  <Commands package="OpenInTerminal">
+      <Buttons>
+          <Button guid="guidOpenInTerminalCmdSet" id="OpenInTerminal" priority="0x500" type="Button">
+              <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE"/>
+              <Icon guid="ImageCatalogGuid" id="VisualStudioOnline" />
+              <CommandFlag>IconIsMoniker</CommandFlag>
+              <Strings>
+                  <ButtonText>Open In Windows Terminal</ButtonText>
+              </Strings>
+          </Button>
+          <Button guid="guidOpenCurrentInTerminalCmdSet" id="OpenCurrentInTerminal" priority="0x0500" type="Button">
+              <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_FILEEDITVIEW" />
+              <Icon guid="ImageCatalogGuid" id="VisualStudioOnline" />
+              <CommandFlag>IconIsMoniker</CommandFlag>
+              <Strings>
+                  <ButtonText>Open In Windows Terminal</ButtonText>
+              </Strings>
+          </Button>
+      </Buttons>
+  </Commands>
+
+    <CommandPlacements>
+        <CommandPlacement guid="guidOpenInTerminalCmdSet" id="OpenInTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInTerminalCmdSet" id="OpenInTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInTerminalCmdSet" id="OpenInTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+
+    <KeyBindings>
+        <KeyBinding guid="guidOpenCurrentInTerminalCmdSet" id="OpenCurrentInTerminal" editor="guidVSStd97" key1="T" mod1="Control Shift"/>
+    </KeyBindings>
+
+  <Symbols>
+      <GuidSymbol name="guidPackage" value="{0a3cf9fa-2fe6-42dc-97df-a0f224cf5854}" />
+      
+      <GuidSymbol name="guidOpenInTerminalCmdSet" value="{a807c8ab-0342-4e11-a055-24c7228e2fb0}">
+        <IDSymbol name="OpenInTerminal" value="0x0001" />
+      </GuidSymbol>
+
+      <GuidSymbol name="guidOpenCurrentInTerminalCmdSet" value="{41dc509b-dae0-40b7-9ad2-0e9809457ddc}">
+          <IDSymbol name="OpenCurrentInTerminal" value="0x0001" />
+      </GuidSymbol>
+  </Symbols>
+</CommandTable>

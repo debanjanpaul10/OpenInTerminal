@@ -1,0 +1,3 @@
+D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\OpenInTerminal.csproj.AssemblyReference.cache
+D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\_EmptyResource.resources
+D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\OpenInTerminal.csproj.GenerateResource.cache
