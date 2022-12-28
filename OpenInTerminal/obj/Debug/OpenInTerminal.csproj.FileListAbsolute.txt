@@ -13,7 +13,6 @@ D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\VSC
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\VSCT.write.1.tlog
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\resources.json
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\ctoFiles.json
-D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\_EmptyResource.resources.original
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\mergeCto.cache
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\OpenInTerminal.csproj.CoreCompileInputs.cache
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\OpenInTerminal.dll
@@ -23,3 +22,4 @@ D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\Ope
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\extension.vsixmanifest
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\files.json
 D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\obj\Debug\createTemplateManifests.cache
+D:\Training content\VS2022Extensions\OpenInTerminal\OpenInTerminal\bin\Debug\Resources\Windows_Terminal_Logo.png
