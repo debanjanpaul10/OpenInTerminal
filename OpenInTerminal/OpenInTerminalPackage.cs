@@ -25,6 +25,11 @@ namespace OpenInTerminal
     [Guid(PackageGuids.guidPackageString)]
     public sealed class OpenInTerminalPackage : AsyncPackage
     {
+        /// <summary>
+        /// Initializes the Function.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <param name="progress">The progress.</param>
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync();

@@ -11,7 +11,7 @@ namespace OpenInTerminal
         public const string Name = "Open In Windows Terminal";
         public const string Description = @"Opens the Solution or any folder in the Windows Terminal. Pre-requisite: Need to have the Windows Terminal installed. The Code is Open Source.";
         public const string Language = "en-US";
-        public const string Version = "2.0";
+        public const string Version = "2.1.0";
         public const string Author = "Debanjan Paul";
         public const string Tags = "";
     }
